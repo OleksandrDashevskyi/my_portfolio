@@ -24,6 +24,7 @@ import {
 } from "@material-ui/icons";
 import avatar from "../avatar.png";
 
+
 //CSS styles
 const useStyles = makeStyles((theme) => ({
   menuSliderContainer: {
