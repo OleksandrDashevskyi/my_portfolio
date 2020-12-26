@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "../components//Footer";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import MobileRightMenuSlider from "@material-ui/core/Drawer";
@@ -15,15 +16,9 @@ import {
   Box,
   ListItemText,
 } from "@material-ui/core";
-import {
-  ArrowBack,
-  AssignmentInd,
-  Home,
-  Apps,
-  ContactMail,
-} from "@material-ui/icons";
+import { AssignmentInd, Home, Apps, ContactMail } from "@material-ui/icons";
+import ListIcon from "@material-ui/icons/List";
 import avatar from "../avatar.png";
-
 
 //CSS styles
 const useStyles = makeStyles((theme) => ({
@@ -47,31 +42,31 @@ const menuItems = [
   {
     listIcon: <Home />,
     listText: "Home",
-    listPath: "/"
+    listPath: "/",
   },
 
   {
     listIcon: <AssignmentInd />,
     listText: "Resume",
-    listPath: "/resume"
+    listPath: "/resume",
   },
 
   {
     listIcon: <Apps />,
     listText: "Portfolio",
-    listPath: "/portfolio"
+    listPath: "/portfolio",
   },
 
   {
     listIcon: <ContactMail />,
     listText: "Contacts",
-    listPath: "/contacts"
+    listPath: "/contacts",
   },
 ];
 
 const Navbar = () => {
   const [state, setState] = useState({
-    right: false,
+    left: false,
   });
 
   const toggeleSlider = (slider, open) => () => {
@@ -108,18 +103,19 @@ const Navbar = () => {
       <Box component="nav">
         <AppBar position="static" style={{ background: "#222" }}>
           <Toolbar>
-            <IconButton onClick={toggeleSlider("right", true)}>
-              <ArrowBack style={{ color: "tomato" }} />
+            <IconButton onClick={toggeleSlider("left", true)}>
+              <ListIcon style={{ color: "tomato" }} />
             </IconButton>
             <Typography variant="h5" style={{ color: "tan" }}>
               Portfolio
             </Typography>
             <MobileRightMenuSlider
-              anchor="right"
-              open={state.right}
-              onClose={toggeleSlider("right", false)}
+              anchor="left"
+              open={state.left}
+              onClose={toggeleSlider("left", false)}
             >
-              {sideList("rigth")}
+              {sideList("left")}
+              <Footer />
             </MobileRightMenuSlider>
           </Toolbar>
         </AppBar>
