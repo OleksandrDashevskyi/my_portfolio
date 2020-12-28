@@ -1,1 +1,2 @@
-Portofolio building in progress. Web app built on React / React-router / Materiaal UI
+Portofolio - development in progress. Web app built on React / React-router-dom / Material UI component 
+
