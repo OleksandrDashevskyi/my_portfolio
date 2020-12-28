@@ -12,9 +12,9 @@ import {
   Avatar,
   Divider,
   List,
-  Typography,
   Box,
   ListItemText,
+  Button,
 } from "@material-ui/core";
 import { AssignmentInd, Home, Apps, ContactMail } from "@material-ui/icons";
 import ListIcon from "@material-ui/icons/List";
@@ -35,6 +35,12 @@ const useStyles = makeStyles((theme) => ({
   },
   listItem: {
     color: "tan",
+  },
+  portfolioLink: {
+    color: "tan",
+    cursor: "pointer", 
+    fontSize: "1.5rem",
+    textDecoration: "none"
   },
 }));
 
@@ -106,9 +112,9 @@ const Navbar = () => {
             <IconButton onClick={toggeleSlider("left", true)}>
               <ListIcon style={{ color: "tomato" }} />
             </IconButton>
-            <Typography variant="h5" style={{ color: "tan" }}>
+            <Link className={classes.portfolioLink} to="/">
               Portfolio
-            </Typography>
+            </Link>
             <MobileRightMenuSlider
               anchor="left"
               open={state.left}

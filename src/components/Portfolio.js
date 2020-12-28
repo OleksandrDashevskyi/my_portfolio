@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 import {
@@ -21,7 +22,8 @@ import compotProject from "../images/Kompot_CRM.png";
 import cocktailDB from "../images/CokctailDB.png";
 import reactRedux from "../images/react-redux.png";
 import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiRedux, SiTypescript, SiMongodb } from "react-icons/si";
+import { SiRedux, SiTypescript, SiMongodb, SiJavascript } from "react-icons/si";
+import SendIcon from "@material-ui/icons/Send";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -45,6 +47,24 @@ const useStyles = makeStyles((theme) => ({
   expandOpen: {
     transform: "rotate(180deg)",
   },
+  header: {
+    color: "white",
+    padding: "0",
+    marginTop: "2rem",
+  },
+  subheader: {
+    width: "100%",
+    color: "tan",
+    maxWidth: 800,
+    align: "center",
+    marginTop: "1rem",
+    marginBottom: "2rem",
+  },
+  linkButton: {
+    marginTop: "1rem",
+    color: "tomato",
+    borderColor: "tomato",
+  },
 }));
 
 const Portfolio = () => {
@@ -62,8 +82,23 @@ const Portfolio = () => {
   };
 
   return (
-    <Box component="div" className={classes.mainContainer}>
+    <Box component="div" className={classes.mainContainer} align="center">
       <Navbar />
+      <Box component="div" className={classes.subheader}>
+        <Typography variant="h4" align="center">
+          <strong>Portfolio</strong>
+        </Typography>
+        <Typography variant="h6">
+          Welcome to my online portfolio. I have experience in developing Full
+          Stack Web apps - MERN Stack and focus on Front End Side using React /
+          Redux. <br /> Want some help building your software?
+        </Typography>
+        <Link to="/contacts" style={{textDecoration: "none"}}>
+          <Button className={classes.linkButton} variant="outlined" endIcon={<SendIcon />}>
+            contact me
+          </Button>
+        </Link>
+      </Box>
       <Grid container justify="center">
         {/* Local Coding */}
         <Grid item xs={12} sm={8} md={6}>
@@ -143,8 +178,8 @@ const Portfolio = () => {
                 <Typography paragraph>
                   I developed a user interface module named as Progress monitor.
                   With the module, the student can tract own progress with
-                  progress graph and adding daily reports. So, a teacher can tract
-                  student progress and assist if necessary. After the
+                  progress graph and adding daily reports. So, a teacher can
+                  tract student progress and assist if necessary. After the
                   implementation of the module, increase positive feedback from
                   customers and increase the quantity of new and potential
                   customers (therefore increase the revenue of the company)
@@ -185,19 +220,14 @@ const Portfolio = () => {
                   color="textSecondary"
                   component="p"
                 >
-                  loremds dsdssdsd sdsdsds dsdsd sdsd sd sdsd sd sd sds ss s s
-                  sdssd ssdsdsd sds s dsd sd sdsdsd sds s sd sdsd sd sd sds dsds
-                  dsd sd sdsd s sd sd sd sds dsdsss sd sd sd s s dsdss sd sd s
-                  sd sdsdsd s sdsd sd s.
+                  CRM Software is a software system that manages a company’s
+                  interactions and relationships with both current and potential
+                  customers.
                 </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-            <Button
-                size="small"
-                color="primary"
-                href="https://kompot.us/"
-              >
+              <Button size="small" color="primary" href="https://kompot.us/">
                 Website
               </Button>
               <Button disabled>Learn More</Button>
@@ -214,34 +244,39 @@ const Portfolio = () => {
             </CardActions>
             <Collapse in={compotExpanded} timeout="auto" unmountOnExit>
               <CardContent>
-                <Typography paragraph>Method:</Typography>
                 <Typography paragraph>
-                  Heat 1/2 cup of the broth in a pot until simmering, add
-                  saffron and set aside for 10 minutes.
+                  CRM software (customer relationship management software)
+                  enhances the customer relationship through managing customer
+                  interaction, tracking leads, and streamlining processes. CRM’s
+                  overall goal is to increase sales by improving business
+                  relationships.
+                  <Typography paragraph>
+                    The app currently in progress. Front End is developing on
+                    React / TypeScript / Redux-Saga (UMI JS). Back End on NodeJs
+                    (Express). DataBase - MongoDB. App deployed on Amazon cloud
+                    platform, both front end and server as well.
+                  </Typography>
                 </Typography>
                 <Typography paragraph>
-                  Heat oil in a (14- to 16-inch) paella pan or a large, deep
-                  skillet over medium-high heat. Add chicken, shrimp and
-                  chorizo, and cook, stirring occasionally until lightly
-                  browned, 6 to 8 minutes. Transfer shrimp to a large plate and
-                  set aside, leaving chicken and chorizo in the pan. Add
-                  pimentón, bay leaves, garlic, tomatoes, onion, salt and
-                  pepper, and cook, stirring often until thickened and fragrant,
-                  about 10 minutes. Add saffron broth and remaining 4 1/2 cups
-                  chicken broth; bring to a boil.
+                  CRM (customer relationship management) software is mainly used
+                  to increase business revenue through the improvement of a
+                  business’s relationship with its customers. A robust, modern
+                  CRM is also used for the following: To consolidate all company
+                  data into one central space. CRM acts as a hub for all team
+                  members to access needed information including, contact
+                  information, communication history and customer history. With
+                  the ability to update data in real-time, the chances of
+                  duplicate data entry and inaccurate information dwindles.
+                  Increase sales opportunities.
+                </Typography>
+                <Typography variant="h6">
+                  <strong>My accomplishment</strong>
                 </Typography>
                 <Typography paragraph>
-                  Add rice and stir very gently to distribute. Top with
-                  artichokes and peppers, and cook without stirring, until most
-                  of the liquid is absorbed, 15 to 18 minutes. Reduce heat to
-                  medium-low, add reserved shrimp and mussels, tucking them down
-                  into the rice, and cook again without stirring, until mussels
-                  have opened and rice is just tender, 5 to 7 minutes more.
-                  (Discard any mussels that don’t open.)
-                </Typography>
-                <Typography>
-                  Set aside off of the heat to let rest for 10 minutes, and then
-                  serve.
+                  Developed various user interfaces such as Invoice and Payment
+                  system on Front end side. Implemented messaging system using
+                  Twillio API service. Result, user can connect by sms with
+                  customer (set up auto messaging) and vise versa
                 </Typography>
               </CardContent>
             </Collapse>
@@ -266,7 +301,7 @@ const Portfolio = () => {
                   CocktailsDB &nbsp;
                   <FaReact color="DeepSkyBlue" />
                   &nbsp;
-                  <SiTypescript color="blue" />
+                  <SiJavascript color="orange" />
                 </Typography>
                 <Typography
                   gutterBottom
@@ -274,19 +309,21 @@ const Portfolio = () => {
                   color="textSecondary"
                   component="p"
                 >
-                  loremds dsdssdsd sdsdsds dsdsd sdsd sd sdsd sd sd sds ss s s
-                  sdssd ssdsdsd sds s dsd sd sdsdsd sds s sd sdsd sd sd sds dsds
-                  dsd sd sdsd s sd sd sd sds dsdsss sd sd sd s s dsdss sd sd s
-                  sd sdsdsd s sdsd sd s.
+                  Personal project developed on React using 3rd party API to
+                  fetch list of cotails with an information. Implemented search
+                  bar using React hooks such as UseRef. For state / props
+                  management, used useContext react hook. For design used CSS3
+                  componensts.
                 </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
-                Share
-              </Button>
-              <Button size="small" color="primary">
-                Learn More
+              <Button
+                size="small"
+                color="primary"
+                href="https://empire-of-cocktails.netlify.app/"
+              >
+                Website
               </Button>
             </CardActions>
           </Card>
