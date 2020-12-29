@@ -14,11 +14,10 @@ import {
   List,
   Box,
   ListItemText,
-  Button,
 } from "@material-ui/core";
 import { AssignmentInd, Home, Apps, ContactMail } from "@material-ui/icons";
 import ListIcon from "@material-ui/icons/List";
-import avatar from "../avatar.png";
+import avatar from "../images/avatar.png";
 
 //CSS styles
 const useStyles = makeStyles((theme) => ({
