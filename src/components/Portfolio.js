@@ -20,7 +20,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import localCoding from "../images/LocalCoding.png";
 import compotProject from "../images/Kompot_CRM.png";
 import cocktailDB from "../images/CokctailDB.png";
-import reactRedux from "../images/react-redux.png";
+import projectInProgress from "../images/project in progress.png";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiRedux, SiTypescript, SiMongodb, SiJavascript } from "react-icons/si";
 import SendIcon from "@material-ui/icons/Send";
@@ -93,8 +93,12 @@ const Portfolio = () => {
           Stack Web apps - MERN Stack and focus on Front End Side using React /
           Redux. <br /> Want some help building your software?
         </Typography>
-        <Link to="/contacts" style={{textDecoration: "none"}}>
-          <Button className={classes.linkButton} variant="outlined" endIcon={<SendIcon />}>
+        <Link to="/contacts" style={{ textDecoration: "none" }}>
+          <Button
+            className={classes.linkButton}
+            variant="outlined"
+            endIcon={<SendIcon />}
+          >
             contact me
           </Button>
         </Link>
@@ -336,7 +340,7 @@ const Portfolio = () => {
                 component="img"
                 alt="React Redux"
                 height="140"
-                image={reactRedux}
+                image={projectInProgress}
               />
               <CardContent>
                 <Typography
@@ -344,10 +348,13 @@ const Portfolio = () => {
                   variant="h5"
                   className={classes.iconPosition}
                 >
-                  CocktailsDB &nbsp;
+                  Great Places &nbsp;
                   <FaReact color="DeepSkyBlue" />
                   &nbsp;
-                  <SiTypescript color="blue" />
+                  <SiJavascript color="orange" />
+                  &nbsp;
+                  <FaNodeJs color="green" />
+                  <SiMongodb color="green" />
                 </Typography>
                 <Typography
                   gutterBottom
@@ -355,18 +362,18 @@ const Portfolio = () => {
                   color="textSecondary"
                   component="p"
                 >
-                  loremds dsdssdsd sdsdsds dsdsd sdsd sd sdsd sd sd sds ss s s
-                  sdssd ssdsdsd sds s dsd sd sdsdsd sds s sd sdsd sd sd sds dsds
-                  dsd sd sdsd s sd sd sd sds dsdsss sd sd sd s s dsdss sd sd s
-                  sd sdsdsd s sdsd sd s.
+                  Full Stack application use MERN stack (MongoDB / Express /
+                  React / NodeJs) Main idea of application to allow users to
+                  share places (with images & location) with other users.
+                  Currently in progress. Demo is coming soon!
                 </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
-                Share
+              <Button disabled>
+                WEBSITE
               </Button>
-              <Button size="small" color="primary">
+              <Button size="small" disabled>
                 Learn More
               </Button>
             </CardActions>

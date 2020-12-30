@@ -29,8 +29,8 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     display: "block",
     margin: "0.5rem auto",
-    width: theme.spacing(13),
-    height: theme.spacing(13),
+    width: theme.spacing(15),
+    height: theme.spacing(15),
   },
   listItem: {
     color: "tan",
@@ -87,6 +87,7 @@ const Navbar = () => {
       onClick={toggeleSlider(slider, false)}
     >
       <Avatar className={classes.avatar} src={avatar} alt="Alex Dashevskyi" />
+    
       <Divider />
       <List>
         {menuItems.map((lsItem, key) => (
